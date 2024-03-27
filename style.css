@@ -1,0 +1,269 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+
+.navbar {
+  display: flex;
+  background-color: #2e2e2e;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  justify-content: space-between;
+  box-shadow: 0 2.5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.navbar img {
+  height: 6rem;
+  width: 7rem;
+}
+
+.navbar #text {
+  margin-right: 1.2rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navbar #text a {
+  font-size: 1.1rem;
+  font-family: "Inter", sans-serif;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.bodyy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.8rem;
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.bodyy #images {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.bodyy #images img {
+  height: 4.5rem;
+  width: 4.5rem;
+  filter: brightness(0) saturate(100%);
+  transition: filter 1s ease;
+}
+
+.bodyy .texts {
+  display: flex;
+  flex-direction: row;
+  gap: 2.2rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 0.6rem;
+}
+
+.galeria {
+  background-color: #2e2e2e;
+  box-shadow: 0 2.5px 20px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: auto;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+#photo1 {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 2.5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.galeria p {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin: 2rem 2rem;
+}
+
+.galeria h1 {
+  color: white;
+}
+
+.carousel-container {
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 1);
+  margin-bottom: 2.5rem;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  height: 100%;
+}
+
+.carousel-control {
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+#video {
+  background-color: black;
+  height: 150px;
+  padding-top: 25%;
+}
+
+#images img:hover {
+  filter: brightness(0) saturate(100%) drop-shadow(0 0 0.5rem orange);
+  scale: 1.1;
+  transition: 0.5s;
+}
+
+#photo1t {
+  color: #2e2e2e;
+  margin: 2.5rem;
+}
+
+#body2 {
+  text-align: center;
+  padding: 1rem 2rem;
+  background-color: #2e2e2e;
+  height: 65rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 1);
+  align-items: center;
+  justify-content: center;
+}
+
+#body2 p {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  width: 85%;
+}
+
+#body2 h1 {
+  color: #fff;
+}
+
+#photo2 {
+  width: 34rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 1);
+}
+
+#photo3 {
+  width: 34rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 1);
+}
+
+#body2 #pzin {
+  color: #2e2e2e;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+
+  margin: auto;
+  padding-top: 2rem;
+}
+
+#body2 #troc {
+  color: #2e2e2e;
+}
+
+footer {
+  background-color: #2e2e2e;
+  margin-top: 5rem;
+  height: 10rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+  border: solid 1px white;
+}
+
+footer img {
+  height: 6rem;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+ul li:first-child {
+  margin-left: -7.5rem;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Regras de mídia para dispositivos de tela menores */
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar img {
+    height: 4rem;
+    width: 5rem;
+  }
+
+  .navbar #text a {
+    font-size: 1rem;
+  }
+
+  .bodyy #images img {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .bodyy .texts {
+    font-size: 0.5rem;
+  }
+}
