@@ -6,13 +6,19 @@ const router = new Router()
 router.add("/", "./pages/home.html")
 router.add("/about", "./pages/about.html")
 router.add("/contact", "./pages/contact.html")
-router.add("/ESG", "./pages/ESG.html")
+router.add("/contato", "./pages/contato.html")
 router.add(404, "./pages/404.html")
 
 router.handle()
 
-window.onpopstate = () => router.handle()
-window.route = (event) => router.route(event)
+window.onpopstate = () => {
+  router.handle()
+  saveState()
+}
+window.route = (event) => {
+  router.route(event)
+  saveState()
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   const sliderImages = document.querySelectorAll(".slider-image")
@@ -45,10 +51,37 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Adiciona eventos de clique aos botões de navegação
-  prevBtn.addEventListener("click", showPrevSlide)
-  nextBtn.addEventListener("click", showNextSlide)
+  prevBtn.addEventListener("click", () => {
+    showPrevSlide()
+    saveState()
+  })
+  nextBtn.addEventListener("click", () => {
+    showNextSlide()
+    saveState()
+  })
 
   // Mostra a primeira imagem ao carregar a página
   showCurrentSlide()
 })
 
+// Função para salvar o estado da aplicação no armazenamento local
+function saveState() {
+  const currentState = {
+    path: window.location.pathname,
+    currentIndex: currentIndex,
+  }
+  localStorage.setItem("appState", JSON.stringify(currentState))
+}
+
+// Função para carregar o estado da aplicação do armazenamento local
+function loadState() {
+  const savedState = localStorage.getItem("appState")
+  if (savedState) {
+    const parsedState = JSON.parse(savedState)
+    window.location.pathname = parsedState.path
+    currentIndex = parsedState.currentIndex
+  }
+}
+
+// Carrega o estado da aplicação quando a página é carregada
+loadState()

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <img class="image" src="/img/Screenshot_10.png" alt="" />
+    <div id="text">
+      <a href="/index.html" onclick="route()">SOBRE</a>
+      <a href="/pages/about.html" onclick="route()">EQUIPAMENTOS</a>
+      <a href="/pages/contato.html" onclick="route()">CONTATO</a>
+      <a href="/pages/404.html" onclick="route()"></a>
+    </div>
+  </div>
+
+  <section id="displayopa">
+    <div id="body22">
+      <h1>CONTATO</h1>
+      <form action="https://backmetal-production.up.railway.app/enviar-email" method="post">
+        <input type="text" name="nome" placeholder="Nome">
+        <input type="tel" name="telefone" placeholder="Telefone">
+        <input type="email" name="email" placeholder="E-mail">
+        <input type="text" name="empresa" placeholder="Empresa">
+        <textarea name="mensagem" cols="30" rows="10" placeholder="Mensagem"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <img src="/img/Screenshot_10.png" alt="" id="imagi">
+    </div>
+  </section>
+</body>
+</html>
