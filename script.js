@@ -20,5 +20,4 @@ function nextImage() {
   showImage(currentIndex)
 }
 
-prevBtn.addEventListener("click", prevImage)
-nextBtn.addEventListener("click", nextImage)
+
