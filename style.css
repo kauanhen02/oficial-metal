@@ -6,7 +6,6 @@ h1 {
   color: #2e2e2e;
 }
 
-
   #images #div-icon {
     font-size: 1.6rem;
     font-family: "Inter", sans-serif;
@@ -197,49 +196,62 @@ html {
     color: white;
   }
 
-  .carousel-container {
-    width: 40%;
+.carousel-container {
+    width: 100%;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 1);
-    margin-bottom: 2.5rem;
   }
-
+  
   .carousel {
     display: flex;
+    justify-content: center; /* Centraliza as imagens horizontalmente */
     transition: transform 0.5s ease;
+    width: 100%;
   }
-
+  
   .carousel-item {
-    flex: 0 0 100%;
+    flex: 0 0 33.33%; /* Para exibir 3 imagens por vez */
+    margin: 0 5px; /* Espaçamento entre as imagens */
   }
-
+  
   .carousel-item img {
     width: 100%;
-
+    height: auto;
     object-fit: cover;
   }
-
+  
   .carousel-controls {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Coloca os botões um de cada lado */
     align-items: center;
     z-index: 1;
-    height: 100%;
   }
-
+  
   .carousel-control {
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
   }
+  
+  .carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .carousel-control.prev {
+    margin-left: 10px; /* Espaçamento para a esquerda */
+  }
+  
+  .carousel-control.next {
+    margin-right: 10px; /* Espaçamento para a direita */
+  }
+  
 
   #video {
     background-color: black;
@@ -474,50 +486,6 @@ h1 {
 
 .galeria h1 {
   color: white;
-}
-
-.carousel-container {
-  width: 40%;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 1);
-  margin-bottom: 2.5rem;
-}
-
-.carousel {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.carousel-item {
-  flex: 0 0 100%;
-}
-
-.carousel-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.carousel-controls {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1;
-  height: 100%;
-}
-
-.carousel-control {
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #fff;
 }
 
 
